@@ -89,3 +89,19 @@ console.log("Summ:", summ); // 25
 // [r]ed + [g]reen + [b]lue = 'rgb'
 const letters = colors.reduce((res, c) => res + c[0], '');
 console.log("Letters:", letters.toUpperCase()); // 'RGB'
+
+// -------------- loops
+// for, while, do while
+
+// ---- for in: iterate over item keys
+for (const key in colors) {
+    console.log(key);
+}
+
+for (const value of colors) {
+    console.log(value);
+}
+
+colors.forEach(x => {
+    console.log(x);
+})
