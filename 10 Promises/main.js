@@ -83,8 +83,18 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(data => console.log(data))
     .catch(err => console.warn(err.message));
 
+const list = document.querySelector('ul.product-list');
+const api = 'https://dummyjson.com/products';
 
+fetch(api)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
 
+        for (const i of data.products) {
+            list.innerHTML += `<li>${i.brand} - ${i.title} ... ${i.price}$</li>`
+        }
+    });
 
 // ---------- Promise
 // create syntax: new Promise((resolve, reject) => {});
