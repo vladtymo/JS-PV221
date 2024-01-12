@@ -13,3 +13,8 @@ global.message = "It is a global variable";
 
 utils.showMessage("Bob");
 utils.showMessage();
+
+// start server steps:
+// 1 - npm i
+// 2 - cd server_directory
+// 3 - node server_file
